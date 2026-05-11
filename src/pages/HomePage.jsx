@@ -259,6 +259,38 @@ export const HomePage = () => {
           </div>
         </section>
 
+        {/* ============ ACCÈS RAPIDE ============ */}
+        <section className="py-16 px-6 bg-surface-container-low">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="text-center mb-12 animate-fade-in">
+              <p className="text-sm uppercase tracking-[0.35em] text-primary mb-3">Accès rapide</p>
+              <h2 className="text-4xl font-bold text-on-surface">Toutes les nouvelles pages en un clic</h2>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { label: 'Contact', href: '/contact' },
+                { label: 'Demande de devis', href: '/devis' },
+                { label: 'Lavage Auto', href: '/lavage-auto/devis' },
+                { label: 'Déménagement', href: '/demenagement/devis' },
+                { label: 'Entretien bureaux', href: '/entretien/bureaux' },
+                { label: 'Climatisation', href: '/entretien/climatisation' },
+                { label: 'Personnel déménagement', href: '/demenagement/personnels' },
+                { label: 'Investissement TIE', href: '/investissement/tie' },
+                { label: 'Simulateur', href: '/investissement/simulateur' },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="group rounded-3xl border border-outline-variant bg-white p-8 text-center shadow-md transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <p className="text-lg font-semibold text-on-surface mb-2">{item.label}</p>
+                  <span className="text-sm text-on-surface-variant group-hover:text-primary transition-colors">Ouvrir la page →</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ============ RÉALISATIONS ============ */}
         <section className="py-20 px-6 bg-surface-container-low">
           <div className="max-w-[1400px] mx-auto">
