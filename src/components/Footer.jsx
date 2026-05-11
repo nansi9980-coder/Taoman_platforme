@@ -118,7 +118,7 @@ export const Footer = () => {
 
           {/* Copyright */}
           <p className="text-center text-outline-variant text-sm">
-            © 2024 Taoman Groupe. Tous droits réservés.
+            © Taoman Groupe. Tous droits réservés.
           </p>
 
           {/* Legal Links */}
