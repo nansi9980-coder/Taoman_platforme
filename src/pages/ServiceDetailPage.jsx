@@ -85,7 +85,18 @@ export const ServiceDetailPage = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-4">{service.title}</h1>
             <p className="text-lg text-white/90 mb-6">{service.description}</p>
             <button
-              onClick={() => navigate('/devis')}
+              onClick={() => {
+                const path = service.title.toLowerCase().includes('lavage')
+                  ? '/lavage-auto/devis'
+                  : service.title.toLowerCase().includes('déménagement')
+                    ? '/demenagement/devis'
+                    : service.title.toLowerCase().includes('climatisation')
+                      ? '/entretien/climatisation'
+                      : service.title.toLowerCase().includes('bureaux')
+                        ? '/entretien/bureaux'
+                        : '/contact';
+                navigate(path);
+              }}
               className="px-8 py-4 bg-white text-primary font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               Demander un devis

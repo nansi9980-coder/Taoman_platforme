@@ -67,7 +67,7 @@ export const ServicesPage = () => {
               Taoman Groupe vous offre des services d'entretien méticuleux, alliant rigueur institutionnelle et expertise technique pour préserver vos actifs et votre environnement.
             </p>
             <button
-              onClick={() => navigate('/devis')}
+              onClick={() => navigate('/services')}
               className="bg-on-primary text-primary px-xl py-md rounded-lg font-label-md font-bold shadow-md hover:opacity-90 transition-all"
             >
               Demander un devis
@@ -122,7 +122,7 @@ export const ServicesPage = () => {
                     {item.desc}
                   </p>
                   <button
-                    onClick={() => navigate('/devis')}
+                    onClick={() => navigate('/services')}
                     className="text-primary font-bold text-body-md hover:underline"
                   >
                     En savoir plus →
@@ -167,7 +167,7 @@ export const ServicesPage = () => {
               Contactez-nous dès aujourd'hui pour un devis gratuit et sans engagement.
             </p>
             <button
-              onClick={() => navigate('/devis')}
+              onClick={() => navigate('/services')}
               className="bg-on-primary text-primary px-xl py-md rounded-lg font-label-md font-bold hover:opacity-90 transition-all"
             >
               Demander un devis

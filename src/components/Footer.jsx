@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-on-background to-on-background/95 text-on-primary pt-16 pb-8">
+    <footer className="bg-black text-white pt-16 pb-8">
       {/* Main Footer Content */}
       <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
         {/* Column 1 - Brand */}
@@ -28,7 +28,6 @@ export const Footer = () => {
               { name: 'Accueil', href: '/' },
               { name: 'Services', href: '/services' },
               { name: 'Investissement', href: '/investissement' },
-              { name: 'Devis', href: '/devis' },
               { name: 'Jobs', href: '/jobs' },
               { name: 'Contact', href: '/contact' },
               { name: 'À propos', href: '/about' },
@@ -50,7 +49,6 @@ export const Footer = () => {
           <h4 className="text-lg font-bold mb-4 text-surface">Accès rapides</h4>
           <ul className="space-y-2">
             {[
-              { name: 'Demande de devis', href: '/devis' },
               { name: 'Lavage Auto', href: '/lavage-auto/devis' },
               { name: 'Déménagement', href: '/demenagement/devis' },
               { name: 'Entretien Bureau', href: '/entretien/bureaux' },
