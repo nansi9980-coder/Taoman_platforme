@@ -73,15 +73,52 @@ export const InvestmentPage = () => {
           </div>
         </section>
 
-        {/* Investment Sectors */}
+        {/* Investment Programs */}
         <section className="bg-surface-container-low py-xxl">
           <div className="max-w-[1200px] mx-auto px-lg">
             <h2 className="text-headline-lg text-on-surface font-bold mb-xl text-center">
+              Nos Programmes
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-xl mb-2xl">
+              <div className="bg-gradient-to-br from-primary to-primary-container p-2xl rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 animate-fade-in-up">
+                <div className="text-6xl mb-xl">💼</div>
+                <h3 className="text-headline-lg text-on-primary font-bold mb-md">
+                  Taoman TIE
+                </h3>
+                <p className="text-body-lg text-on-primary/90 mb-xl">
+                  Programme d'investissement avec retours mensuels garantis et diversification sectorielle.
+                </p>
+                <button
+                  onClick={() => navigate('/investissement/tie')}
+                  className="w-full bg-on-primary text-primary py-md rounded-lg font-label-md font-bold hover:opacity-90 transition-all hover:scale-105"
+                >
+                  Découvrir le TIE →
+                </button>
+              </div>
+
+              <div className="bg-gradient-to-br from-secondary to-secondary-container p-2xl rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 animate-fade-in-up" style={{animationDelay: '100ms'}}>
+                <div className="text-6xl mb-xl">📊</div>
+                <h3 className="text-headline-lg text-on-secondary font-bold mb-md">
+                  Simulateur
+                </h3>
+                <p className="text-body-lg text-on-secondary/90 mb-xl">
+                  Estimez vos revenus en temps réel et planifiez votre stratégie d'investissement.
+                </p>
+                <button
+                  onClick={() => navigate('/investissement/simulateur')}
+                  className="w-full bg-on-secondary text-secondary py-md rounded-lg font-label-md font-bold hover:opacity-90 transition-all hover:scale-105"
+                >
+                  Utiliser le simulateur →
+                </button>
+              </div>
+            </div>
+
+            <h2 className="text-headline-lg text-on-surface font-bold mb-xl text-center mt-2xl">
               Secteurs d'Investissement
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-xl">
               {sectors.map((sector, idx) => (
-                <div key={idx} className="bg-white p-xl rounded-xl shadow-md hover:shadow-lg transition-all">
+                <div key={idx} className="bg-white p-xl rounded-xl shadow-md hover:shadow-lg transition-all animate-fade-in-up" style={{animationDelay: `${idx * 100}ms`}}>
                   <div className="text-5xl mb-md">{sector.icon}</div>
                   <h3 className="text-headline-md text-on-surface font-bold mb-md">
                     {sector.title}

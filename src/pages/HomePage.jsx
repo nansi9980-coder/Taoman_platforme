@@ -252,7 +252,7 @@ export const HomePage = () => {
                   key={idx}
                   {...service}
                   delay={idx * 100}
-                  onRequestQuote={() => navigate('/devis')}
+                  onRequestQuote={() => navigate('/services')}
                 />
               ))}
             </div>
@@ -269,7 +269,6 @@ export const HomePage = () => {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 { label: 'Contact', href: '/contact' },
-                { label: 'Demande de devis', href: '/devis' },
                 { label: 'Lavage Auto', href: '/lavage-auto/devis' },
                 { label: 'Déménagement', href: '/demenagement/devis' },
                 { label: 'Entretien bureaux', href: '/entretien/bureaux' },

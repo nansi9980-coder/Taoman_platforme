@@ -5,7 +5,6 @@ import { InvestmentPage } from './pages/InvestmentPage';
 import { JobsPage } from './pages/JobsPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
-import { QuotePage } from './pages/QuotePage';
 import { LoginPage } from './pages/LoginregisterPage';
 import { RegisterPage } from './pages/RegisterPage';
 import { LegalPage } from './pages/LegalPage';
@@ -40,7 +39,6 @@ function App() {
           {/* Pages Secondaires */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/devis" element={<QuotePage />} />
           <Route path="/lavage-auto/devis" element={<LavageAutoDevisPage />} />
           <Route path="/demenagement/devis" element={<DemenagementDevisPage />} />
           <Route path="/entretien/bureaux" element={<EntretienBureauxPage />} />

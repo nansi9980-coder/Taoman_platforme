@@ -76,16 +76,27 @@ export const ServicesPage = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="py-xxl max-w-[1200px] mx-auto px-lg w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl">
-            {serviceDetails.map((service, index) => (
-              <ServiceCard
-                key={index}
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-                onRequestQuote={() => navigate('/devis')}
-              />
+        <section className="py-xxl max-w-[1400px] mx-auto px-lg w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: Icons.car, title: "Lavage automobile & moto", description: "Nettoyage complet de la carrosserie, vitres, roues et intérieur", href: '/lavage-auto/devis' },
+              { icon: Icons.truck, title: "Déménagement & Aménagement", description: "Transport sûr et efficace de vos biens vers votre nouveau lieu", href: '/demenagement/devis' },
+              { icon: Icons.building, title: "Entretien des bureaux", description: "Services complets d'entretien pour vos espaces de travail", href: '/entretien/bureaux' },
+              { icon: Icons.ac, title: "Entretien climatisation", description: "Installation, maintenance et réparation de climatiseurs", href: '/entretien/climatisation' }
+            ].map((service, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group h-full flex flex-col animate-fade-in-up" style={{animationDelay: `${index * 50}ms`}}>
+                <div className="p-6 flex flex-col h-full">
+                  <div className="text-primary text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                  <h3 className="text-lg font-bold text-on-surface mb-2">{service.title}</h3>
+                  <p className="text-sm text-on-surface-variant mb-6 flex-grow">{service.description}</p>
+                  <button
+                    onClick={() => navigate(service.href)}
+                    className="w-full bg-gradient-to-r from-primary to-primary-container text-white py-2.5 rounded-lg font-bold text-sm hover:shadow-md transition-all duration-300 hover:scale-105 active:scale-95"
+                  >
+                    Demander un devis →
+                  </button>
+                </div>
+              </div>
             ))}
           </div>
         </section>
