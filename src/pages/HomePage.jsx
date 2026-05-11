@@ -11,6 +11,9 @@ import mecanique2 from '../assets/realisations/mecanique2.jpg';
 import transport1 from '../assets/realisations/transport1.jpg';
 import transport2 from '../assets/realisations/transport2.jpg';
 import { API_URL } from "../config";
+import btpIcon from '../assets/btp_sector.jpeg';
+import agroIcon from '../assets/agro_sector.jpeg';
+import transportIcon from '../assets/transport_sector.jpeg';
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -117,9 +120,9 @@ export const HomePage = () => {
   ];
 
   const sectors = apiSiteContent.sectors || [
-    { title: 'BTP & Immobilier',       icon: '🏗️', description: 'Projets de construction durable' },
-    { title: 'Agro & Énergie',         icon: '🌾', description: 'Agriculture moderne et énergies renouvelables' },
-    { title: 'Transport & Logistique', icon: '🚛', description: 'Solutions logistiques intégrées' },
+    { title: 'BTP & Immobilier',       icon: btpIcon, description: 'Projets de construction durable' },
+    { title: 'Agro & Énergie',         icon: agroIcon, description: 'Agriculture moderne et énergies renouvelables' },
+    { title: 'Transport & Logistique', icon: transportIcon, description: 'Solutions logistiques intégrées' },
   ];
 
   const testimonials = apiSiteContent.testimonials || [
@@ -393,7 +396,7 @@ export const HomePage = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-primary-container/40"></div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/80 transition-all duration-300"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform group-hover:translate-y-0 translate-y-2 transition-transform duration-300">
-                    <div className="text-4xl mb-3">{sector.icon}</div>
+                    <img src={sector.icon} alt={sector.title} className="w-16 h-16 object-contain mb-3 bg-white/10 rounded-lg p-1" />
                     <h3 className="text-2xl font-bold mb-2">{sector.title}</h3>
                     <p className="text-white/90">{sector.description}</p>
                     <p className="text-primary-fixed mt-2 font-bold">En savoir plus →</p>

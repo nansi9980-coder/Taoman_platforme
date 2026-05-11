@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
+import btpIcon from '../assets/btp_sector.jpeg';
+import agroIcon from '../assets/agro_sector.jpeg';
+import transportIcon from '../assets/transport_sector.jpeg';
 
 export const TaoEconomicInvestmentPage = () => {
   const navigate = useNavigate();
@@ -17,21 +20,21 @@ export const TaoEconomicInvestmentPage = () => {
   const sectors = [
     {
       title: 'BTP & Immobilier',
-      icon: '🏗️',
+      icon: btpIcon,
       description: 'Projets de construction durable',
       details: 'Investissez dans des projets immobiliers de qualité avec un potentiel de croissance élevé',
-      opportunities: 'Villas résidentielles, Immeubles de bureaux, Centres commerciaux'
+      opportunities: 'Villas residential, Immeubles de bureaux, Centres commerciaux'
     },
     {
       title: 'Agro & Énergie',
-      icon: '🌾',
+      icon: agroIcon,
       description: 'Agriculture moderne et énergies renouvelables',
       details: 'Participez à la révolution agricole et énergétique en Afrique de l\'Ouest',
       opportunities: 'Fermes modernes, Panneaux solaires, Biocarburants'
     },
     {
       title: 'Transport & Logistique',
-      icon: '🚛',
+      icon: transportIcon,
       description: 'Solutions logistiques intégrées',
       details: 'Investissez dans les chaînes d\'approvisionnement modernes et rentables',
       opportunities: 'Flottes de véhicules, Entrepôts, Services de déménagement'
@@ -141,7 +144,7 @@ export const TaoEconomicInvestmentPage = () => {
                   style={{ animationDelay: `${idx * 100}ms` }}
                 >
                   <div className="bg-gradient-to-br from-primary/20 to-primary-container/20 p-8 border-b border-outline/20">
-                    <div className="text-5xl mb-4">{sector.icon}</div>
+                    <img src={sector.icon} alt={sector.title} className="w-20 h-20 object-contain mb-4 bg-white/50 rounded-xl p-2" />
                     <h3 className="text-2xl font-bold text-on-surface mb-2">{sector.title}</h3>
                     <p className="text-on-surface-variant">{sector.description}</p>
                   </div>
