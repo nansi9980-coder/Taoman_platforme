@@ -122,6 +122,10 @@ export const Footer = () => {
             <Link to="/confidentialite" className="text-outline-variant hover:text-primary-fixed transition-colors">
               Confidentialité
             </Link>
+            <span className="text-outline-variant">/</span>
+            <Link to="/termes-conditions" className="text-outline-variant hover:text-primary-fixed transition-colors">
+              Termes & Conditions
+            </Link>
           </div>
         </div>
       </div>
