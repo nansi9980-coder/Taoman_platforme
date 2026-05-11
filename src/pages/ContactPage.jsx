@@ -23,7 +23,7 @@ export const ContactPage = () => {
     setSubmitted(true);
     
     try {
-      const response = await fetch(`${API_URL}/quotes/submit`, {
+      const response = await fetch(`${API_URL}/contacts`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,9 +32,8 @@ export const ContactPage = () => {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
-          title: formData.subject,
-          description: formData.message,
-          service: 'Contact',
+          subject: formData.subject,
+          message: formData.message,
         }),
       });
 
