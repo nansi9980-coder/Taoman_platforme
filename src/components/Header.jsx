@@ -55,7 +55,9 @@ export const Header = ({ activeLink = 'accueil' }) => {
             { name: 'Accueil', href: '/', key: 'accueil' },
             { name: 'Services', href: '/services', key: 'services' },
             { name: 'Investissement', href: '/investissement', key: 'investissement' },
+            { name: 'Devis', href: '/devis', key: 'devis' },
             { name: 'Jobs', href: '/jobs', key: 'jobs' },
+            { name: 'Contact', href: '/contact', key: 'contact' },
             { name: 'À propos', href: '/about', key: 'about' },
           ].map((link) => (
             <Link
@@ -127,9 +129,10 @@ export const Header = ({ activeLink = 'accueil' }) => {
               { name: 'Accueil', href: '/', key: 'accueil' },
               { name: 'Services', href: '/services', key: 'services' },
               { name: 'Investissement', href: '/investissement', key: 'investissement' },
+              { name: 'Devis', href: '/devis', key: 'devis' },
               { name: 'Jobs', href: '/jobs', key: 'jobs' },
-              { name: 'À propos', href: '/about', key: 'about' },
               { name: 'Contact', href: '/contact', key: 'contact' },
+              { name: 'À propos', href: '/about', key: 'about' },
             ].map((link) => (
               <Link
                 key={link.key}

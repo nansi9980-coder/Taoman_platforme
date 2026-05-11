@@ -28,7 +28,9 @@ export const Footer = () => {
               { name: 'Accueil', href: '/' },
               { name: 'Services', href: '/services' },
               { name: 'Investissement', href: '/investissement' },
-              { name: 'Offres d\'emploi', href: '/jobs' },
+              { name: 'Devis', href: '/devis' },
+              { name: 'Jobs', href: '/jobs' },
+              { name: 'Contact', href: '/contact' },
               { name: 'À propos', href: '/about' },
             ].map((link) => (
               <li key={link.href}>
@@ -45,17 +47,25 @@ export const Footer = () => {
 
         {/* Column 3 - Services */}
         <div>
-          <h4 className="text-lg font-bold mb-4 text-surface">Services</h4>
+          <h4 className="text-lg font-bold mb-4 text-surface">Accès rapides</h4>
           <ul className="space-y-2">
             {[
-              'Lavage Auto',
-              'Déménagement',
-              'Entretien Bureau',
-              'Climatisation',
-              'Investissement'
-            ].map((service, idx) => (
-              <li key={idx} className="text-outline-variant text-sm hover:text-primary-fixed transition-colors cursor-pointer">
-                {service}
+              { name: 'Demande de devis', href: '/devis' },
+              { name: 'Lavage Auto', href: '/lavage-auto/devis' },
+              { name: 'Déménagement', href: '/demenagement/devis' },
+              { name: 'Entretien Bureau', href: '/entretien/bureaux' },
+              { name: 'Climatisation', href: '/entretien/climatisation' },
+              { name: 'Personnel Déménagement', href: '/demenagement/personnels' },
+              { name: 'Investissement TIE', href: '/investissement/tie' },
+              { name: 'Simulateur', href: '/investissement/simulateur' },
+            ].map((link) => (
+              <li key={link.href}>
+                <Link
+                  to={link.href}
+                  className="text-outline-variant hover:text-primary-fixed transition-colors duration-300 hover:translate-x-1 inline-block text-sm"
+                >
+                  {link.name} →
+                </Link>
               </li>
             ))}
           </ul>
